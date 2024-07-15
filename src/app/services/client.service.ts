@@ -6,25 +6,22 @@ import { resolve } from 'path';
 @Injectable({
   providedIn: 'root'
 })
+
 export class ClientService {
   BASE_URL = 'http://localhost:3000/';
 
-  constructor(public http: HttpClient) { }
+  constructor(private http: HttpClient) { }
 
-  // function para captar los datos del web service
+  // Function to get client data by ID
   getClientByIdentification(identification: string) {
     return new Promise((resolve, reject) => {
-      this.http.get(this.BASE_URL + 'client/' + identification).subscribe({
-        next:       (data) => {
-          resolve(data);
-        },
+      this.http.get(this.BASE_URL + 'usuario/' + identification).subscribe({
+        next: (data) => resolve(data),
         error: (err) => {
           console.error('Error al obtener los datos:', err);
           reject(err);
         }
-      }
-      );
+      });
     });
   }
-
 }
