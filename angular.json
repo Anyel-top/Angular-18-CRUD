@@ -36,8 +36,8 @@
               "src/styles.scss"
             ],
             "scripts": [
-              "node_modules/jquery/dist/jquery/jquery.min.js",
-              "node_modules/@poppersjs/core/dist/umd/popper.min.js",
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/@popperjs/core/dist/umd/popper.min.js",
               "node_modules/bootstrap/dist/js/bootstrap.min.js"
             ],
             "server": "src/main.server.ts",
