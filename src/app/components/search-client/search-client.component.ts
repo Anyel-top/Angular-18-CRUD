@@ -20,9 +20,11 @@ export class SearchClientComponent {
 
   constructor(private clientService: ClientService) { }
 
+  // method async to get client by identification 
   async getClientByIdentification() {
     try {
       if (this.cedula !== "") {
+        // use method of service of ClienteService
         const cliente: any = await this.clientService.getClientByIdentification(this.cedula);
         if (cliente.length > 0) {
           const clientData = cliente[0];
@@ -32,7 +34,7 @@ export class SearchClientComponent {
           this.direccion = clientData.direccion;
           this.correo = clientData.correo;
         } else {
-          // Manejar caso donde no se encontró ningún cliente
+          //Case when the client is not found
           console.log('Cliente no encontrado');
         }
       }
