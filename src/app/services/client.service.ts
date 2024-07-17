@@ -26,7 +26,7 @@ export class ClientService {
 
   saveClient(data: any) {
     return new Promise((resolve, reject) => {
-      this.http.get(this.BASE_URL + 'cliente/', data).subscribe({
+      this.http.post(this.BASE_URL + 'cliente/', data).subscribe({
         next: (data) => resolve(data),
         error: (err) => {
           console.error('Error al obtener los datos:', err);

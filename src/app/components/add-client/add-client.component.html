@@ -17,7 +17,7 @@
                   class="form-control"
                   id="floatingInput"
                   placeholder="2300287246"
-                  [(ngModel)]="nombre"
+                  [(ngModel)]="cedula"
                 />
                 <label for="floatingInput">Cédula de Identidad</label>
               </div>
@@ -51,7 +51,7 @@
                 />
                 <label for="floatingInput">Direccion</label>
               </div>
-              <button class="btn btn-primary">Guardar</button>
+              <button class="btn btn-primary" (click)="saveCliente()">Guardar</button>
               <br /><br />
         </div>
     </div>  

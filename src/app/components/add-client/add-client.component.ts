@@ -25,6 +25,7 @@ export class AddClientComponent {
     try {
       let newClient = this.buildAndGetNewClientObject();
       await this.clientService.saveClient(newClient);
+      console.log("Guardado")
     } catch (err) {
       console.log(err);
     }
@@ -37,5 +38,6 @@ export class AddClientComponent {
       correo: this.correo,
       direccion: this.direccion,
     };
+    return newClient;
   }
 }
